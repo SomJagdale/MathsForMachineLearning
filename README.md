@@ -1,6 +1,7 @@
 # MathsForMachineLearning
 ## Module 1 - Functions
-Important Concepts functuons 
+
+Back to Basics - Function
 1. Defincation of fucntion
 2. Properties of Function
 3. How Function can be represented
@@ -11,4 +12,9 @@ Important Concepts functuons
 8. What is derivates and relationship with function
 9. What is integral and relationship with function
 10. What is continuity and relatioship with function
-11. 
+
+Gradient and Darivative 
+Gradient(slope) and Darivative(slope at any perticular point) 
+
+
+
