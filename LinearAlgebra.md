@@ -157,3 +157,5 @@ In many fields, we approximate or decompose a function using a **linear combinat
 - In **signal processing**, a function can be projected onto basis functions using the **dot product**, which measures how much of one function aligns with another.
 - For example, **Fourier coefficients** are computed using dot products with sine and cosine functions.
 
+![image](https://github.com/user-attachments/assets/c253d09f-b418-4601-82f6-671b4c5fa4be)
+
