@@ -11,5 +11,10 @@
 ![image](https://github.com/user-attachments/assets/20ca894c-125b-48c0-b96c-b5d5c5e68bbe)
 
 
+The formula involves the cosine of the angle, which is a scalar function.
+Multiplying magnitudes and a cosine value removes directionality, leaving only a magnitude.
+![image](https://github.com/user-attachments/assets/2b2d30d5-22eb-4e9b-877c-fdc0de5a3760)
+
+![image](https://github.com/user-attachments/assets/c48cce34-cd46-475d-a469-caa50e6c1a1c)
 
 
