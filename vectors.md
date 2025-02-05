@@ -19,4 +19,5 @@ Multiplying magnitudes and a cosine value removes directionality, leaving only a
 
 ![image](https://github.com/user-attachments/assets/96616e43-fa5d-4c6d-b57e-2e89e5e894e5)
 
+![image](https://github.com/user-attachments/assets/827ee5eb-9469-4efc-93a1-a9da7fb6e32e)
 
