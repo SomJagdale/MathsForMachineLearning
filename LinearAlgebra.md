@@ -159,3 +159,136 @@ In many fields, we approximate or decompose a function using a **linear combinat
 
 ![image](https://github.com/user-attachments/assets/c253d09f-b418-4601-82f6-671b4c5fa4be)
 
+Let’s break these concepts down in a simple way:  
+
+---
+
+## **1. Eigenvalues and Eigenvectors**
+### **What are they?**
+- **Eigenvalues** and **eigenvectors** are special properties of square matrices that reveal how the matrix transforms space.
+- If we multiply a matrix \( A \) by a vector \( v \), and the result is just a **scaled** version of \( v \), then \( v \) is an **eigenvector**, and the scaling factor is its **eigenvalue** (\( \lambda \)).
+
+### **Mathematical Definition**
+For a square matrix \( A \):
+\[
+A v = \lambda v
+\]
+where:
+- \( v \) is the **eigenvector** (a nonzero vector)
+- \( \lambda \) is the **eigenvalue** (a scalar)
+
+### **Why are they important?**
+- Used in **machine learning** (e.g., PCA – Principal Component Analysis)
+- Helps in **stability analysis** of systems
+- Used in **Google’s PageRank algorithm**  
+
+### **Example**
+If  
+\[
+A = \begin{bmatrix} 4 & 2 \\ 1 & 3 \end{bmatrix}
+\]
+has an eigenvector \( v = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \),  
+then \( A v = \lambda v \), meaning it just gets scaled.
+
+To compute **eigenvalues**, solve:
+\[
+\det(A - \lambda I) = 0
+\]
+which gives the values of \( \lambda \).
+
+---
+
+## **2. Singular Value Decomposition (SVD)**
+### **What is it?**
+- SVD is a method of **decomposing** any (even non-square) matrix into three **special matrices**:
+  \[
+  A = U \Sigma V^T
+  \]
+  where:
+  - \( U \) = Left **orthogonal** matrix (columns are eigenvectors of \( A A^T \))
+  - \( \Sigma \) = **Diagonal matrix** of singular values (like eigenvalues but always positive)
+  - \( V^T \) = Right **orthogonal** matrix (columns are eigenvectors of \( A^T A \))
+
+### **Why is it useful?**
+- **Dimensionality reduction** (PCA uses SVD)
+- **Image compression** (JPEG uses it)
+- **Solving ill-conditioned systems** (numerically stable than normal inverse)
+
+### **Example**
+If  
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}
+\]
+then:
+- \( U \) and \( V \) are orthogonal
+- \( \Sigma \) contains the **singular values**.
+
+In Python, compute it using:
+```python
+U, S, VT = np.linalg.svd(A)
+```
+
+---
+
+## **3. Norm of a Matrix**
+### **What is it?**
+- The **norm** of a matrix is a single number that represents the matrix’s **size** or **magnitude**.
+
+### **Common Norms**
+1. **Frobenius Norm**: 
+   \[
+   ||A||_F = \sqrt{\sum A_{ij}^2}
+   \]
+   (Sum of squares of all elements)
+   
+2. **L1 Norm** (Max column sum):  
+   \[
+   ||A||_1 = \max \sum |A_{ij}|
+   \]
+
+3. **L∞ Norm** (Max row sum):  
+   \[
+   ||A||_{\infty} = \max \sum |A_{ij}|
+   \]
+
+### **Why is it useful?**
+- Measures the **size of transformation** a matrix performs.
+- Used in **optimization** and **error analysis**.
+
+### **Example in NumPy**
+```python
+np.linalg.norm(A, 'fro')  # Frobenius norm
+```
+
+---
+
+## **4. QR Decomposition**
+### **What is it?**
+- QR decomposition **factorizes** a matrix into:
+  \[
+  A = QR
+  \]
+  where:
+  - \( Q \) = Orthogonal matrix (\( Q^T Q = I \))
+  - \( R \) = Upper triangular matrix
+
+### **Why is it useful?**
+- Used in **solving linear systems** and **Least Squares Regression**.
+- Basis for many **numerical algorithms**.
+
+### **Example in NumPy**
+```python
+Q, R = np.linalg.qr(A)
+```
+
+---
+
+### **Final Summary**
+| Concept | Meaning | Application |
+|---------|---------|-------------|
+| **Eigenvalues & Eigenvectors** | Special vectors where matrix multiplication only scales them | PCA, stability analysis, Google PageRank |
+| **Singular Value Decomposition (SVD)** | Breaks matrix into orthogonal components | Dimensionality reduction, image compression |
+| **Matrix Norm** | Measures size of a matrix | Error estimation, optimization |
+| **QR Decomposition** | Factorizes matrix into orthogonal & upper triangular form | Solving equations, least squares |
+
+Let me know if you need more details! 🚀s
